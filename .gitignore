@@ -20,3 +20,4 @@ yarn-error.log
 .idea/dictionaries
 .idea/vcs.xml
 .idea/jsLibraryMappings.xml
+.idea/watcherTasks.xml
