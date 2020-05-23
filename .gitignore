@@ -22,3 +22,4 @@ yarn-error.log
 .idea/jsLibraryMappings.xml
 .idea/watcherTasks.xml
 .idea/dataSources.local.xml
+.idea/dataSources/**
