@@ -10981,3 +10981,45 @@ a.text-dark:focus {
   font-size: 25px;
 }
 
+#emailTemplate-page .card-back {
+  background-color: #6574cd;
+  color: white;
+  font-size: 14px;
+}
+
+#emailTemplate-page li {
+  list-style: none;
+  font-size: 7px;
+  background-color: #1d643b;
+  float: left;
+  margin-right: 2%;
+  margin-bottom: 2%;
+  width: 23.5%;
+}
+
+#emailTemplate-page li:nth-child(4n) {
+  margin-right: 0;
+}
+
+#emailTemplate-page li:hover .card-back {
+  color: black;
+  background-color: #f2f2f2;
+}
+
+#emailTemplate-page li:hover .card-body {
+  background-color: #f2f2f2;
+  height: 200px;
+}
+
+#emailTemplate-page li:hover .card-body img {
+  width: 80%;
+}
+
+#emailTemplate-page .card-body {
+  height: 200px;
+}
+
+#emailTemplate-page .card-body img {
+  width: 60%;
+}
+

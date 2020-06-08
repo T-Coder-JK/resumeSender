@@ -7,6 +7,9 @@
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
 
+// Mixins
+@import "mixins";
+
 #welcome-page{
     .full-height {
         height: 100vh;
@@ -55,4 +58,37 @@
     background-color: $indigo;
     color: white;
     font-size: 25px;
+}
+
+#emailTemplate-page{
+    .card-back{
+        background-color: $indigo;
+        color: white;
+        font-size: 14px;
+    }
+    li {
+        list-style: none;
+        font-size: 7px;
+        background-color: #1d643b;
+        @include templateGrid(4, 2%);
+        &:hover {
+            .card-back{
+                color: black;
+                background-color: #f2f2f2;
+            }
+            .card-body{
+                background-color: #f2f2f2;
+                height: 200px;
+                img{
+                    width: 80%;
+                }
+            }
+        }
+    }
+    .card-body{
+        height: 200px;
+        img{
+            width: 60%;
+        }
+    }
 }
