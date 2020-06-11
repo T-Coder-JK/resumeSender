@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class AddSoftdeletToEmailTable extends Migration
+class AddEmailTemplateTitleToEmailTemplatesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -14,7 +14,8 @@ class AddSoftdeletToEmailTable extends Migration
     public function up()
     {
         Schema::table('email_templates', function (Blueprint $table) {
-            $table->softDeletes();
+            //add title for every email template
+            $table->string('title');
         });
     }
 
@@ -26,7 +27,8 @@ class AddSoftdeletToEmailTable extends Migration
     public function down()
     {
         Schema::table('email_templates', function (Blueprint $table) {
-            $table->dropSoftDeletes();
+            //drop email template title column
+            $table->dropColumn('title');
         });
     }
 }

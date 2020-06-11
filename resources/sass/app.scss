@@ -72,15 +72,23 @@
         background-color: #1d643b;
         @include templateGrid(4, 2%);
         &:hover {
+            .card{
+                border: 1px solid rgba(101, 116, 205, 0.2);
+                border-radius: 0.25rem;
+            }
+            .card-header{
+                font-weight: bold;
+                border-bottom: 0px;
+            }
             .card-back{
                 color: black;
-                background-color: #f2f2f2;
+                background-color: rgba(101, 116, 205, 0.5);
             }
             .card-body{
-                background-color: #f2f2f2;
-                height: 200px;
+                background-color: rgba(245, 237, 237, 0.2);;
                 img{
-                    width: 80%;
+                    opacity: 1.0;
+                    width: 45%;
                 }
             }
         }
@@ -88,7 +96,9 @@
     .card-body{
         height: 200px;
         img{
-            width: 60%;
+            opacity: 0.8;
+            margin-top: 25px;
+            width: 35%;
         }
     }
 }

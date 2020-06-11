@@ -11001,18 +11001,28 @@ a.text-dark:focus {
   margin-right: 0;
 }
 
+#emailTemplate-page li:hover .card {
+  border: 1px solid rgba(101, 116, 205, 0.2);
+  border-radius: 0.25rem;
+}
+
+#emailTemplate-page li:hover .card-header {
+  font-weight: bold;
+  border-bottom: 0px;
+}
+
 #emailTemplate-page li:hover .card-back {
   color: black;
-  background-color: #f2f2f2;
+  background-color: rgba(101, 116, 205, 0.5);
 }
 
 #emailTemplate-page li:hover .card-body {
-  background-color: #f2f2f2;
-  height: 200px;
+  background-color: rgba(245, 237, 237, 0.2);
 }
 
 #emailTemplate-page li:hover .card-body img {
-  width: 80%;
+  opacity: 1;
+  width: 45%;
 }
 
 #emailTemplate-page .card-body {
@@ -11020,6 +11030,8 @@ a.text-dark:focus {
 }
 
 #emailTemplate-page .card-body img {
-  width: 60%;
+  opacity: 0.8;
+  margin-top: 25px;
+  width: 35%;
 }
 

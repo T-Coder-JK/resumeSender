@@ -10,7 +10,7 @@ class EmailTemplates extends Model
      * @var array
      */
     protected $fillable = [
-      'user_id', 'content'
+      'user_id', 'content', 'title'
     ];
 
 

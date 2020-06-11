@@ -4,6 +4,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <!-- Website Shortcut Icon -->
+    <link rel="shortcut icon" href="{{ asset('images/PNG/512X512/startup.png') }}">
+
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
@@ -56,7 +59,7 @@
                                 </a>
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                                     <a class="dropdown-item" href="{{ url('/home') }}">My Account</a>
-                                    <a class="dropdown-item" href="{{ url('/emailtemplates') }}">Email Templates</a>
+                                    <a class="dropdown-item" href="{{ url('/emailTemplates') }}">Email Templates</a>
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
