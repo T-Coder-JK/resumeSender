@@ -40,7 +40,15 @@ class User extends Authenticatable
     /**
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */
-    public function emailTemplate (){
+    public function emailTemplate(){
         return $this->hasMany(EmailTemplates::class);
+    }
+
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function application(){
+        return $this->hasMany(Application::class);
     }
 }

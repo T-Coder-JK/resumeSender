@@ -21,5 +21,6 @@ yarn-error.log
 .idea/vcs.xml
 .idea/jsLibraryMappings.xml
 .idea/watcherTasks.xml
+.idea/laravel-plugin.xml
 .idea/dataSources.local.xml
 .idea/dataSources/**

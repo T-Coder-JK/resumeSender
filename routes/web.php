@@ -24,10 +24,15 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 
 /*
- | Route for emailTemplates Controller
+ | Route for emailTemplates Controllers
  */
 Route::get('/emailTemplates', 'EmailTemplatesController@index')->name('emailTemplates');
 Route::post('/emailTemplates', 'EmailTemplatesController@store');
 Route::get('/emailTemplates/create','EmailTemplatesController@create')->name('createEmailTemplate');
 Route::get('/emailTemplates/{template_id}/show', 'EmailTemplatesController@show');
 Route::get('/emailTemplates/{template_id}/load','EmailTemplatesController@load');
+
+/*
+ | Route for Application Controllers
+ */
+Route::get('application/{user}/create','ApplicationController@create')->name('createApplication');
