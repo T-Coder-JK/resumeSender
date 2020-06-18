@@ -15,9 +15,12 @@ class CreateApplicationReplyTable extends Migration
     {
         Schema::create('application_replies', function (Blueprint $table) {
             $table->id();
-            $table->timestamp('reply_at');
+            $table->timestamp('replied_at');
             $table->foreignId('application_id')->constrained('applications');
-            $table->longText('reply_content');
+            $table->longText('replied_content');
+            $table->softDeletes('deleted_at',0);
+            $table->timestamps();
+            $table->index('application_id');
         });
     }
 

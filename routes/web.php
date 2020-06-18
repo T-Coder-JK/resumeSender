@@ -36,3 +36,4 @@ Route::get('/emailTemplates/{template_id}/load','EmailTemplatesController@load')
  | Route for Application Controllers
  */
 Route::get('application/{user}/create','ApplicationController@create')->name('createApplication');
+Route::post('application/preview', 'ApplicationController@preview')->name('previewApplication');

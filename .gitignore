@@ -24,3 +24,5 @@ yarn-error.log
 .idea/laravel-plugin.xml
 .idea/dataSources.local.xml
 .idea/dataSources/**
+.idea/blade.xml
+.idea/codeStyles/**

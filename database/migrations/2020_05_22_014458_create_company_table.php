@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateCoverLetterTemplatesTable extends Migration
+class CreateCompanyTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,13 @@ class CreateCoverLetterTemplatesTable extends Migration
      */
     public function up()
     {
-        Schema::create('cover_letter_templates', function (Blueprint $table) {
+        Schema::create('companies', function (Blueprint $table) {
             $table->id();
+            $table->string('company_name');
+            $table->string('address');
+            $table->string('contact');
             $table->timestamps();
-            $table->foreignId('user_id')->constrained('users');
-            $table->string('format');
-            $table->longText('content');
+            $table->index(['company_name', 'address']);
         });
     }
 
@@ -29,6 +30,6 @@ class CreateCoverLetterTemplatesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('cover_letter_templates');
+        Schema::dropIfExists('companies');
     }
 }

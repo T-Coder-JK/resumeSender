@@ -7,6 +7,9 @@
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
 
+//Bootstrap-select
+@import '~bootstrap-select/sass/bootstrap-select';
+
 // Mixins
 @import "mixins";
 
@@ -100,5 +103,14 @@
             margin-top: 25px;
             width: 35%;
         }
+    }
+}
+
+
+#newApplication-page{
+    .bootstrap-select .btn{
+        background-color: #ffffff;
+        border: 1px solid #ced4da;
+        border-radius: 0.25em;
     }
 }

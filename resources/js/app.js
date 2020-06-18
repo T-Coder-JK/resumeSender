@@ -13,3 +13,9 @@ require('./bootstrap');
  */
 
 require('./components/Example');
+
+
+/**
+ * Bootstrap select component instance installation to this application
+*/
+require('bootstrap-select');

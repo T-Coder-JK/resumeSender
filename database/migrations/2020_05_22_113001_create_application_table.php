@@ -16,20 +16,24 @@ class CreateApplicationTable extends Migration
         Schema::create('applications', function (Blueprint $table) {
             $table->id();
             $table->foreignId('user_id')->references('id')->on('users');
-            $table->timestamp('apply_at')->nullable();
+            $table->timestamp('applied_at')->nullable();
             $table->timestamps();
-            $table->integer('email_id')->nullable();
             $table->string('job_ad')->nullable();
-            $table->integer('company_id');
+            $table->foreignId('company_id')->nullable()->constrained('companies');
             $table->string('job_title');
             $table->boolean('interview')->default(0);
             $table->boolean('got_reply')->default(0);
             $table->string('job_type');
-            $table->string('salary');
+            $table->string('salary')->nullable();
             $table->longText('additional_description')->nullable();
-            $table->boolean('has_applied')->default(0);
             $table->integer('personal_rank')->nullable();
             $table->integer('possibility')->nullable();
+            $table->foreignId('email_templates_id')->nullable()->constrained('email_templates');
+            $table->foreignId('cover_letter_id')->nullable()->constrained('cover_letter_templates');
+            $table->foreignId('resume_id')->nullable()->constrained('resume_templates');
+            $table->softDeletes('deleted_at',0);
+            $table->index('user_id');
+
         });
     }
 

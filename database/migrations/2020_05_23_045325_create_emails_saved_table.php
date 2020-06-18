@@ -13,15 +13,20 @@ class CreateEmailsSavedTable extends Migration
      */
     public function up()
     {
-        Schema::create('emails_saved', function (Blueprint $table) {
+        Schema::create('saved_emails', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
-            $table->string('sender');
-            $table->string('receiver');
-            $table->foreignId('email_template_id')->constrained('email_templates');
-            $table->foreignId('cover_letter_template_id')->constrained('cover_letter_templates');
-            $table->foreignId('resume_template_id')->constrained('resume_templates');
-            $table->longText('content');
+            $table->string('sender_email')->nullable();
+            $table->string('sender_name')->nullable();
+            $table->string('receiver_email')->nullable();
+            $table->string('receive_name')->nullable();
+            $table->foreignId('email_template_id')->nullable()->constrained('email_templates');
+            $table->foreignId('cover_letter_template_id')->nullable()->constrained('cover_letter_templates');
+            $table->foreignId('resume_template_id')->nullable()->constrained('resume_templates');
+            $table->longText('content')->nullable();
+            $table->softDeletes('deleted_at',0);
+            $table->foreignId('application_id')->nullable()->constrained('applications');
+            $table->foreignId('user_id')->constrained('users');
         });
     }
 
@@ -32,6 +37,6 @@ class CreateEmailsSavedTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('emails_saved');
+        Schema::dropIfExists('saved_emails');
     }
 }
