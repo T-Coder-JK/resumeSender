@@ -55,8 +55,4 @@ class EmailTemplatesController extends Controller
         ]);
     }
 
-    public function load($template_id){
-        return $template = auth()->user()->emailTemplate()->findOrFail($template_id)->content;
-    }
-
 }

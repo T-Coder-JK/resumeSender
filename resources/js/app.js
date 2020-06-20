@@ -12,10 +12,11 @@ require('./bootstrap');
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
-require('./components/Example');
+require('./components/HtmlEditor');
 
 
 /**
  * Bootstrap select component instance installation to this application
 */
 require('bootstrap-select');
+

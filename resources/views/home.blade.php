@@ -11,5 +11,7 @@
         </div>
 
     </div>
+
+    {{--TODO: OTHER FUNCTIONS FOR USER DASHBOARD--}}
 </div>
 @endsection

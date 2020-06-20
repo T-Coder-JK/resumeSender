@@ -128,7 +128,7 @@
                         @enderror
                     </div>
                 </div>
-
+                {{--TODO: MODIFY THE SELECT ELEMENT FRONTEND AND OLD DATA FUNCTION--}}
                 {{--select job type input--}}
                 <div class="form-group row m-auto pb-4 align-items-center">
                     <label for="job_type" class="col-form-label col-2 font-weight-bold">Job Type:</label>

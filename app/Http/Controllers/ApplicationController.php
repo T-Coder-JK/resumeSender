@@ -17,7 +17,7 @@ class ApplicationController extends Controller
 
     public function create(User $user){
 
-        return view('Applications.newApplication', compact('user'));
+        return view('applications.new', compact('user'));
     }
 
 
@@ -46,22 +46,37 @@ class ApplicationController extends Controller
             'job_type'=>$request->job_type,
             'salary'=>$request->salary,
             'additional_description'=>$request->description,
+            'email_templates_id'=>$request->emailTemplate,
             'personal_rank'=>$request->personal_rank,
             'possibility'=>$request->possibility,
         ];
         $company = Company::firstOrNew(['company_name'=>$company_data['company_name'], 'address'=>$company_data['address']]);
-
         if($company->exists){
             $application_data['company_id']=$company->id;
-            $application_id = auth()->user()->application()->create($application_data)->id;
-            $company->application_id = $application_id;
-            $company->save();
+            $application = auth()->user()->application()->create($application_data);
 
-//            dd($application_id);
         }else{
-            $id = $company->create($company_data)->id;
+            $company = $company->create($company_data);
+            $application_data['user_id'] = auth()->user()->id;
+            $application = $company->application()->create($application_data);
+
         }
 
-        dd($company_data, $application_data);
+        return view('applications.preview', compact('application'));
+
+    }
+
+    /**
+     * replace the placeholders in content with given variable
+     *
+     * @return mixed|string
+     */
+    protected function parseContent($content, $replacement) {
+
+        foreach ($replacement as $key => $value) {
+            $content = str_replace("%{$key}%", $value, $content);
+        }
+
+        return $content;
     }
 }

@@ -12,6 +12,6 @@ class Company extends Model
     ];
 
     public function application(){
-        $this->belongsTo(Application::class);
+        return $this->hasMany(Application::class);
     }
 }

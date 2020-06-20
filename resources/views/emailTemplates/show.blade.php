@@ -1,10 +1,8 @@
 @extends('layouts.app')
+{{--show email template in an iframe element--}}
 @section('content')
     <div class="container">
-        <div class="row">
-            <iframe style="width: 100%; height: 1450px; border: none;" src="{{url("/emailTemplates/".$template->id."/load")}}" >
-            </iframe>
-        </div>
+        <div id="htmlEditor" data-content="{{$template->content}}"></div>
     </div>
 @stop
 
