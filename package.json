@@ -26,6 +26,7 @@
     },
     "dependencies": {
         "bootstrap-select": "^1.13.17",
+        "react-toastify": "^6.0.6",
         "summernote": "^0.8.18"
     }
 }

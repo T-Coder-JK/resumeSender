@@ -1,8 +1,11 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\EmailTemplates;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
+use Illuminate\Http\Response;
+use Throwable;
 
 class EmailTemplatesController extends Controller
 {
@@ -18,7 +21,10 @@ class EmailTemplatesController extends Controller
         $this->middleware('auth');
     }
 
-
+    /**
+     * Show all the email templates of the user
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
 
     public function index(){
         $user = Auth::user();
@@ -27,11 +33,16 @@ class EmailTemplatesController extends Controller
         ]);
     }
 
+    /**
+     * Create a new email template view
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
     public function create(){
         return view('emailTemplates.create');
     }
 
     /**
+     * Store new created email template into database
      * Create a New EmailTemplate Data
      */
     public function store(){
@@ -53,6 +64,20 @@ class EmailTemplatesController extends Controller
         return view('emailTemplates.show',[
             'template' => $template,
         ]);
+    }
+
+    /**
+     * Update edited email template into database
+     * @param EmailTemplates $template
+     * @param Request $request
+     * @return \Illuminate\Http\JsonResponse
+     */
+
+    public function update($templateId, Request $request){
+        $template = EmailTemplates::findOrFail($templateId);
+        $template->content = $request->templateContent;
+        $template->save();
+        return response()->json('Success', 200);
     }
 
 }

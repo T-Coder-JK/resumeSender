@@ -30,6 +30,7 @@ Route::get('/emailTemplates', 'EmailTemplatesController@index')->name('emailTemp
 Route::post('/emailTemplates', 'EmailTemplatesController@store');
 Route::get('/emailTemplates/create','EmailTemplatesController@create')->name('createEmailTemplate');
 Route::get('/emailTemplates/{template_id}/show', 'EmailTemplatesController@show');
+Route::patch('/emailTemplates/{templateId}/update', 'EmailTemplatesController@update')->name('updateEmailTemplate');
 
 /*
  | Route for Application Controllers

@@ -1,6 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-// import $ from 'jquery';
+import { toast, ToastContainer} from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 /**
  *  Summernote is a WYSIWYG editor component
  *  Which dependents on jQuery and Bootstrap CSS
@@ -8,6 +10,13 @@ import ReactDOM from 'react-dom';
 import 'summernote';
 
 class HtmlEditor extends React.Component{
+
+    constructor(props){
+        super(props);
+        this.handleSaveClick = this.handleSaveClick.bind(this);
+
+    }
+
     componentDidMount(){
        this.initSummernote();
     }
@@ -32,6 +41,31 @@ class HtmlEditor extends React.Component{
         });
         editor.summernote('code',document.getElementById('htmlEditor').getAttribute('data-content'));
         editor.summernote('disable');
+
+    }
+
+    handleSaveClick(){
+        let templateId = document.getElementById('htmlEditor').getAttribute('data-id');
+        let templateContent = $('#summernote').summernote('code');
+        axios({
+            method: 'patch',
+            url: '/emailTemplates/'+templateId+'/update',
+            data: {
+                templateContent: templateContent
+            },
+
+        })
+            .then(response => {
+                toast.success('Saved', {
+                    position: toast.POSITION.BOTTOM_CENTER
+                });
+                console.log(response);
+            })
+            .catch(error => {
+                console.log(error)
+            })
+
+
 
     }
 
@@ -60,7 +94,7 @@ class HtmlEditor extends React.Component{
                             }
 
                         }}>Edit</button>
-                        <button className="btn-primary p-2 w-25 rounded">Save</button>
+                        <button className="btn-primary p-2 w-25 rounded" onClick={this.handleSaveClick}>Save</button>
                     </div>
                 </div>
             </div>
@@ -68,5 +102,9 @@ class HtmlEditor extends React.Component{
     }
 }
 
-ReactDOM.render(<HtmlEditor/>, document.getElementById('htmlEditor'));
+if (document.getElementById('htmlEditor')) {
+    toast.configure();
+    ReactDOM.render(<HtmlEditor/>, document.getElementById('htmlEditor'));
+}
+
 
