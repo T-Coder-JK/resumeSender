@@ -117,3 +117,39 @@
         border-radius: 0.25em;
     }
 }
+
+
+#dashboard-page{
+    #sideBar{
+        background-image: linear-gradient(to bottom, rgba(113, 109, 255, 100), rgba(164, 125, 255, 100));
+        padding-right: 0;
+        padding-left: 15px;
+    }
+
+    .nav-title{
+        text-shadow: 0 2px 5px #5361FF;
+    }
+
+    .sidebar-select{
+        padding: 0;
+       .side-links {
+            width: 100%;
+            display: inline-block;
+            border-left: 5px solid rgba(255, 255, 255, 0);
+            &:hover {
+                background-color: rgba(255, 255, 255, 0.3);
+                border-left: 5px solid white;
+            }
+           a{
+               color: white;
+               &:visited{
+                   text-decoration: none;
+               }
+               &:hover{
+                   text-decoration: none;
+               }
+           }
+        }
+    }
+
+}
