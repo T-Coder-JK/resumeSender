@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class HomeController extends Controller
+class DashboardController extends Controller
 {
     /**
      * Create a new controller instance.
@@ -25,5 +25,14 @@ class HomeController extends Controller
     {
         $user = auth()->user();
         return view('Dashboard', compact('user'));
+    }
+
+    /**
+     * Get request and passing user information
+     *
+     * */
+    public function getUser(){
+        $user= auth()->user();
+        return $user;
     }
 }

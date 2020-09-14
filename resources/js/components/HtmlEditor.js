@@ -59,7 +59,6 @@ class HtmlEditor extends React.Component{
                 toast.success('Saved', {
                     position: toast.POSITION.BOTTOM_CENTER
                 });
-                console.log(response);
             })
             .catch(error => {
                 console.log(error)

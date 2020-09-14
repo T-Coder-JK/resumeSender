@@ -1,0 +1,32 @@
+<svg width="28px" height="28px" viewBox="0 0 28 28" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.3 (57544) - http://www.bohemiancoding.com/sketch -->
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <filter x="-3.1%" y="-0.7%" width="106.2%" height="102.1%" filterUnits="objectBoundingBox" id="filter-1">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.7">
+        <g id="Push-Notifications-Dashboard-UI" transform="translate(-117.000000, -858.000000)">
+            <g id="Sidebar" transform="translate(77.000000, 178.000000)">
+                <g id="Sidebar-items" filter="url(#filter-1)" transform="translate(44.000000, 140.000000)">
+                    <g id="Message-Personalization" transform="translate(0.000000, 540.000000)">
+                        <g id="Group-6" transform="translate(0.000000, 2.000000)">
+                            <path d="M3.125,20 C3.045,20 2.96375,19.98375 2.88625,19.9525 C2.6525,19.85625 2.5,19.6275 2.5,19.375 L2.5,16.25 L1.875,16.25 C0.84125,16.25 0,15.40875 0,14.375 L0,4.375 C0,3.34125 0.84125,2.5 1.875,2.5 L8.125,2.5 C8.47,2.5 8.75,2.78 8.75,3.125 C8.75,3.47 8.47,3.75 8.125,3.75 L1.875,3.75 C1.53,3.75 1.25,4.03 1.25,4.375 L1.25,14.375 C1.25,14.71875 1.53,15 1.875,15 L3.125,15 C3.47,15 3.75,15.28 3.75,15.625 L3.75,17.86625 L6.4325,15.18375 C6.55,15.06625 6.70875,15 6.875,15 L16.875,15 C17.21875,15 17.5,14.71875 17.5,14.375 L17.5,11.875 C17.5,11.53 17.78,11.25 18.125,11.25 C18.47,11.25 18.75,11.53 18.75,11.875 L18.75,14.375 C18.75,15.40875 17.90875,16.25 16.875,16.25 L7.13375,16.25 L3.56625,19.8175 C3.4475,19.93625 3.2875,20 3.125,20" id="Fill-1" fill="#FFFFFF"></path>
+                            <g id="Group-5" transform="translate(8.750000, 0.000000)">
+                                <polygon id="Clip-4" points="0.490225506 0 11.24946 0 11.24946 10.295083 0.490225506 10.295083"></polygon>
+                                <path d="M2.4585,4.516 L3.9285,5.94975 C4.076,6.0935 4.14475,6.29975 4.10975,6.50225 L3.76225,8.526 L5.581,7.571 C5.7635,7.47475 5.981,7.47475 6.16225,7.571 L7.97975,8.526 L7.6335,6.50225 C7.5985,6.29975 7.66475,6.09225 7.8135,5.94975 L9.28475,4.516 L7.251,4.21975 C7.0485,4.191 6.871,4.06225 6.781,3.8785 L5.87225,2.036 L4.961,3.8785 C4.871,4.06225 4.6935,4.191 4.491,4.21975 L2.4585,4.516 Z M8.8085,10.29475 C8.7085,10.29475 8.60975,10.26975 8.51975,10.22225 L5.871,8.82975 L3.221,10.2235 C3.011,10.3335 2.756,10.316 2.5635,10.176 C2.371,10.036 2.2735,9.7985 2.31475,9.5635 L2.821,6.61475 L0.6785,4.52725 C0.5085,4.361 0.44725,4.1135 0.521,3.88725 C0.5935,3.661 0.78975,3.496 1.02475,3.46225 L3.9835,3.031 L5.30975,0.3485 C5.41475,0.13475 5.63225,-0.00025 5.86975,-0.00025 C6.10725,-0.00025 6.32475,0.13475 6.42975,0.3485 L7.7535,3.031 L10.71475,3.46225 C10.94975,3.496 11.146,3.661 11.2185,3.88725 C11.29225,4.1135 11.23225,4.361 11.05975,4.52725 L8.91725,6.616 L9.4235,9.5635 C9.4635,9.7985 9.36725,10.03475 9.17475,10.17475 C9.06725,10.25475 8.9385,10.2935 8.8085,10.29475 Z" id="Fill-3" fill="#FFFFFF"></path>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

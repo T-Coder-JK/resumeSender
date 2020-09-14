@@ -13,7 +13,7 @@ require('./bootstrap');
  */
 
 require('./components/HtmlEditor');
-
+require('./components/SideBar');
 
 /**
  * Bootstrap select component instance installation to this application
