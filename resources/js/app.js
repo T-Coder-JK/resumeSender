@@ -14,6 +14,7 @@ require('./bootstrap');
 
 require('./components/HtmlEditor');
 require('./components/SideBar');
+require('./components/CardSection');
 
 /**
  * Bootstrap select component instance installation to this application

@@ -1,0 +1,42 @@
+//variables
+@import "variables";
+//mixins
+@import "mixins";
+//Fonts
+@import url("https://fonts.googleapis.com/css?family=Nunito:200,600");
+
+
+
+#card-section{
+
+}
+.data-card-row{
+    margin: 20px 5px 0px 5px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    @media (max-width: 767px){
+        justify-content: space-evenly;
+    }
+
+}
+
+.data-card{
+    float: left;
+    width: 16rem;
+    height: 11.2rem;
+    color: white;
+    background: #1d643b;
+    margin: 1rem 1rem 1rem 1rem;
+    border-radius: 0.5rem;
+}
+
+.data-card-application{
+    background-image: linear-gradient(135deg, rgba(169, 127, 255, 100), rgba(115, 109, 255, 100));
+}
+
+.data-card-completed{
+    background-image: linear-gradient(135deg, rgba(), rgba());
+}

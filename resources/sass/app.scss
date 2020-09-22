@@ -16,6 +16,9 @@
 // Mixins
 @import "mixins";
 
+
+
+
 #welcome-page{
     .full-height {
         height: 100vh;
@@ -76,6 +79,12 @@
         list-style: none;
         font-size: 7px;
         background-color: #1d643b;
+        @media screen and (max-width: 992px){
+            @include templateGrid(2, 4%);
+        }
+        @media screen and (max-width: 576px){
+            @include templateGrid(1, 10%);
+        }
         @include templateGrid(4, 2%);
         &:hover {
             .card{
@@ -122,8 +131,17 @@
 #dashboard-page{
     #sideBar{
         background-image: linear-gradient(to bottom, rgba(113, 109, 255, 100), rgba(164, 125, 255, 100));
-        padding-right: 0;
-        padding-left: 15px;
+        max-width: 240px;
+        height: 100vh;
+
+        /*TODO: hide navigation bar, add a button to show it again*/
+        @media screen and (max-width: 576px){
+            display: none;
+
+        }
+    }
+    #dashboard{
+        flex: 1;
     }
 
     .nav-title{
