@@ -5,7 +5,7 @@
             <div id="sideBar"></div>
             <form method="POST" action="{{route('logout')}}" style="display: none" id="logout-form">@csrf</form>
             <div id="dashboard" class="bg-light vh-100 ">
-                <div class="d-flex flex-row border-bottom">
+                <div class="d-flex flex-row border-bottom sticky-top bg-light">
                     <div class=" flex-column align-self-start pl-2">
                         <div class="font-italic h7">overview</div>
                         <div class="font-weight-bold h2">Dashboard</div>

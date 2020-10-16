@@ -8,13 +8,15 @@ import '../../../public/css/component/card_section.css';
 function CardSection() {
     return(
         <div className='data-card-row'>
-            <DashboardCard title='card data 1' type='application' icon='application' />
+            <DashboardCard title='Applied Job' type='application' icon='completed' />
+            <DashboardCard title='Ongoing' type='ongoing-application' icon='application' />
+            <DashboardCard title='Reply' type='message' icon='message' />
+            <DashboardCard title='Interview' type='interview' icon='interview' />
         </div>
     );
 }
 
 if (document.getElementById("card-section")){
-    console.log('found');
     ReactDom.render(<CardSection />, document.getElementById("card-section"));
 }
 

@@ -18,9 +18,12 @@ Route::get('/', function () {
 });
 
 Auth::routes();
-
+/*
+ | Route for Dashboard Controllers
+ */
 Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
 Route::get('/dashboard/getUser', 'DashboardController@getUser');
+Route::get('/dashboard/getApplicationInfo', 'DashboardController@getApplicationInfo');
 
 
 

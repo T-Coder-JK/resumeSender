@@ -68,7 +68,7 @@ class EmailTemplatesController extends Controller
 
     /**
      * Update edited email template into database
-     * @param EmailTemplates $template
+     * @param EmailTemplates $templateId
      * @param Request $request
      * @return \Illuminate\Http\JsonResponse
      */
