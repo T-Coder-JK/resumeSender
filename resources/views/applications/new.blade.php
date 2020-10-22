@@ -10,7 +10,7 @@
 
     <div class="row mt-5">
         <div class="col-10 col-sm-8 m-auto rounded border-danger">
-            <form action="{{route('previewApplication')}}" method="POST" enctype="multipart/form-data">
+            <form action="{{route('createNewApplication')}}" method="POST" enctype="multipart/form-data">
                 @csrf
                 {{--company name input--}}
                 <div class="form-group row m-auto pb-4 align-items-center">

@@ -29,25 +29,32 @@ class DashboardController extends Controller
     }
 
     /**
-     * Get request and passing user information
-     *
-     * @return User
-     * */
-    public function getUser(){
-        $user= auth()->user();
-        return $user;
-    }
-
-    /**
      * Get request and passing application info
      *
      * @return array
      * */
     public function getApplicationInfo(){
-        $applications= auth()->user()->application->toArray();
         $result = [];
-        $appliedNum = 0;
-        $ongoingNum = 0;
-        return findLatestDate($applications,'created_at');
+        $applications= auth()->user()->application;
+        $applied = $applications->where('applied_at',!null);
+        $result['applied']['num'] = sizeof($applied);
+        if (sizeof($applied) >0){
+            $result['applied']['date'] = findLatestDate($applied, 'applied_at', 'd F Y');
+        }else{
+            $result['applied']['date'] = null;
+        }
+        $ongoing = $applications->where('applied_at',null);
+        $result['ongoing']['num'] = sizeof($ongoing);
+        if (sizeof($ongoing)>0){
+            $result['ongoing']['date'] = findLatestDate($ongoing,'updated_at','d F Y');
+        }else{
+            $result['ongoing']['date'] = null;
+        }
+
+        return $result;
+    }
+
+    public function showView($name){
+        return $name;
     }
 }

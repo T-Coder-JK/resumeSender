@@ -10,14 +10,14 @@ class Application extends Model
       'job_ad', 'company_id', 'job_title',  'job_type', 'salary', 'additional_description', 'personal_rank', 'possibility','email_templates_id','cover_letter_id','resume_id', 'applied_at', 'interview', 'got_reply', 'user_id'];
 
     /**
-     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     * @return void
      */
     public function user(){
         $this->belongsTo(User::class);
     }
 
     /**
-     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     * @return void
      */
     public function company(){
         $this->belongsTo(Company::class);

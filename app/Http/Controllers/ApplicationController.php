@@ -15,13 +15,13 @@ class ApplicationController extends Controller
         $this->middleware('auth');
     }
 
-    public function create(User $user){
+    public function formView(User $user){
 
         return view('applications.new', compact('user'));
     }
 
 
-    public function preview(Request $request){
+    public function create(Request $request){
         $request->validate([
             'company'=>'required|string',
             'position'=>'required',

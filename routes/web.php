@@ -22,8 +22,8 @@ Auth::routes();
  | Route for Dashboard Controllers
  */
 Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
-Route::get('/dashboard/getUser', 'DashboardController@getUser');
 Route::get('/dashboard/getApplicationInfo', 'DashboardController@getApplicationInfo');
+Route::get('/view/{name}','DashboardController@showView');
 
 
 
@@ -39,5 +39,5 @@ Route::patch('/emailTemplates/{templateId}/update', 'EmailTemplatesController@up
 /*
  | Route for Application Controllers
  */
-Route::get('application/{user}/create','ApplicationController@create')->name('createApplication');
-Route::post('application/preview', 'ApplicationController@preview')->name('previewApplication');
+Route::get('application/{user}/new_job','ApplicationController@formView')->name('newApplication');
+Route::post('application/create', 'ApplicationController@create')->name('createNewApplication');

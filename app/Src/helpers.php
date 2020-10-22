@@ -9,21 +9,26 @@
  * @return \Carbon\Carbon
  */
 
-
-
+use Carbon\Carbon;
 
 
 /**
- * @param array $arr
+ * @param array $arrs
  * @param string $key
- * @return \Carbon\Carbon $latestDate
+ * @param string $dateFormat
+ * @return Carbon $latestDate
  * */
-function findLatestDate($arr, $key){
-    $latestDate = \Carbon\Carbon::minValue();
-    for($i=0; $i<sizeof($arr); $i++){
-        if ($arr[$i][$key] > $latestDate){
-            $latestDate = $arr[$i][$key];
+function findLatestDate($arrs, $key, $dateFormat){
+    $latestDate = Carbon::minValue();
+    foreach($arrs as $arr){
+        if ($arr[$key] > $latestDate){
+            $latestDate = $arr[$key];
         }
+
     }
-    return $latestDate;
+    if (gettype($latestDate) === 'object'){
+        return $latestDate->format($dateFormat);
+    }else{
+        return Carbon::create($latestDate)->format($dateFormat);
+    }
 }
