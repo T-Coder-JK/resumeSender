@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Website Shortcut Icon -->
-    <link rel="shortcut icon" href="{{ asset('images/PNG/512X512/startup.png') }}">
+    <link rel="shortcut icon" href="{{ asset('startup.ico') }}">
 
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
