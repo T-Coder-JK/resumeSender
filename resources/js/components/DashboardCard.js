@@ -36,7 +36,7 @@ const Header = ({icon, title}) =>(
 const ApplicationCard = (props)=>(
     <div className='applied-content'>
         <div className='applied-num'>
-            <a src=''>{props.num}</a>
+            <p>{props.num}</p>
         </div>
         <div className="last-time">
             <span>Latest: {props.date}</span>
@@ -47,7 +47,7 @@ const ApplicationCard = (props)=>(
 const OngoingCard = (props)=>(
     <div>
         <div className='applied-num'>
-            <a src=''>{props.num}</a>
+            <p>{props.num}</p>
         </div>
         <div className="last-time">
             <span>Latest Modified:  {props.date}</span>
@@ -58,7 +58,7 @@ const OngoingCard = (props)=>(
 const ReplyMessage = ()=>(
     <div>
         <div className='applied-num'>
-            <a src=''>0</a>
+            <p>0</p>
         </div>
         <div className="last-time">
             <span>Latest:  March 10th 2020</span>
@@ -69,7 +69,7 @@ const ReplyMessage = ()=>(
 const Interview = ()=>(
     <div>
         <div className='applied-num'>
-            <a src=''>1</a>
+            <p>1</p>
         </div>
         <div className="last-time">
             <span>Next:  March 10th 2020</span>

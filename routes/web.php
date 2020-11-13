@@ -41,3 +41,9 @@ Route::patch('/emailTemplates/{templateId}/update', 'EmailTemplatesController@up
  */
 Route::get('application/{user}/new_job','ApplicationController@formView')->name('newApplication');
 Route::post('application/create', 'ApplicationController@create')->name('createNewApplication');
+
+/*
+ | Route for Job Ad Scrapper Controller
+ */
+
+Route::resource('scrapper','JobAdScrapperController')->only('index');

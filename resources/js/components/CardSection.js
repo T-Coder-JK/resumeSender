@@ -27,7 +27,6 @@ class CardSection extends React.Component{
                         appliedData:response.data.applied,
                         ongoingData:response.data.ongoing
                     });
-                    console.log(this.state);
                 })
                 .catch(error=>{
                     console.log(error)
