@@ -1,5 +1,6 @@
 {
     "/js/app.js": "/js/app.js",
     "/css/app.css": "/css/app.css",
-    "/css/component/card_section.css": "/css/component/card_section.css"
+    "/css/component/card_section.css": "/css/component/card_section.css",
+    "/css/component/blog_editor.css": "/css/component/blog_editor.css"
 }

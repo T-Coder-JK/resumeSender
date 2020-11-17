@@ -13,4 +13,5 @@ const mix = require('laravel-mix');
 
 mix.react('resources/js/app.js', 'public/js')
     .sass('resources/sass/app.scss', 'public/css')
-    .sass('resources/sass/card_section.scss', 'public/css/component');
+    .sass('resources/sass/card_section.scss', 'public/css/component')
+    .sass('resources/sass/blog_editor.scss', 'public/css/component');

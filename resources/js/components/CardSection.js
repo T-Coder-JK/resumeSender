@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDom from 'react-dom';
 import DashboardCard from './DashboardCard';
 import '../../../public/css/component/card_section.css';
 import axios from 'axios';
@@ -46,7 +45,5 @@ class CardSection extends React.Component{
 
 }
 
-if (document.getElementById('card-section')){
-    ReactDom.render(<CardSection />, document.getElementById('card-section'));
-}
+export default CardSection;
 

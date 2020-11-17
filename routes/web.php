@@ -21,9 +21,10 @@ Auth::routes();
 /*
  | Route for Dashboard Controllers
  */
-Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
+//Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
 Route::get('/dashboard/getApplicationInfo', 'DashboardController@getApplicationInfo');
 Route::get('/view/{name}','DashboardController@showView');
+Route::get('/dashboard/{path?}','DashboardController@index')->name('dashboard');
 
 
 

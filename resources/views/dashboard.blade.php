@@ -14,7 +14,7 @@
                         <a class="p-2 btn btn-success text-white font-weight-bold" href="{{url('application/'.$user->id.'/new_job')}}">New Application</a>
                     </div>
                 </div>
-                <div id="card-section"></div>
+                <div id="content"></div>
             </div>
         </div>
     </div>
