@@ -14,6 +14,8 @@ import TableTool from '@editorjs/table';
 import InlineCode from '@editorjs/inline-code';
 import Marker from '@editorjs/marker';
 import '../../../public/css/component/blog_editor.css';
+import AnimationInput from './style_mini_components/AnimationInput';
+import AnimationSelect from './style_mini_components/AnimationSelect';
 
 function BlogEditor() {
     const editor = new EditorJS({
@@ -90,14 +92,30 @@ function BlogEditor() {
         }
     });
     return(
-        <div className='editor_container w-100 h-100 bg-primary'>
-            <div>
-                <input name='tag' className='input-group-text' type='text'></input>
-                <input name='classify' className='input-group-text' type='text'></input>
+        <div className='editor-page w-100'>
+            <div className='editor-header d-flex flex-row border-bottom sticky-top'>
+                <div className='flex-column align-self-start pl-2'>
+                    <div className='font-italic h7'>Blog Editor</div>
+                    <div className='font-weight-bold h2'>New+</div>
+                </div>
             </div>
-            <div className='col-9 m-auto bg-primary vh-100 w-100 pt-5 pb-5'>
-                <div className='w-100 h-100 bg-light'>
-                    <div id='editor'></div>
+            <div className='editor-bg'>
+                <div className='input-editor col-9 m-auto'>
+                    <div className='section-input d-inline-flex flex-row  align-items-center'>
+                        <div className='text-input'>
+                            <AnimationInput name='email' type='email' label='Email'/>
+                        </div>
+                        <div className='text-input'>
+                            <AnimationInput name='tag' type='text' label='Blog Tag'/>
+                        </div>
+                        <div className='text-input'>
+                            <AnimationSelect name='group' label='Visbility' options={['Private something very wordy and long','Publish','Publish1','Publish2','Publish3','Publish4']} id='visibiligy-groups'/>
+                        </div>
+
+                    </div>
+                    <div className='editor-pad w-100 bg-light'>
+                        <div id='editor'></div>
+                    </div>
                 </div>
             </div>
         </div>

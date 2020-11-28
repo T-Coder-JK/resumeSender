@@ -6,12 +6,15 @@ import BlogEditor from './BlogEditor';
 
 
 class Dashboard extends React.Component{
+    constructor(props){
+        super(props);
+    }
     render(){
         return(
             <Router>
                 <Switch>
                     <Route exact path='/dashboard'>
-                        <CardSection/>
+                        <CardSection userId={this.props.userId}/>
                     </Route>
                     <Route path='/dashboard/editor'>
                         <BlogEditor/>
@@ -24,5 +27,6 @@ class Dashboard extends React.Component{
 
 if(document.getElementById('content')){
     const content = document.getElementById('content');
-    ReactDOM.render(<Dashboard/>, content);
+    let userId = content.getAttribute('user-id');
+    ReactDOM.render(<Dashboard userId={userId}/>, content);
 }

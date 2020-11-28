@@ -17,7 +17,15 @@ $yellow: #ffed4a;
 $green: #38c172;
 $teal: #4dc0b5;
 $cyan: #6cb2eb;
-
+$col-light-blue:rgba(113, 109, 255, 100);
+$col-light-purple:rgba(164, 125, 255, 100);
+$col-light-green:rgba(68, 222, 197, 100);
+$col-dark-green:rgba(78, 188, 250, 100);
+$col-magic-mint:#A6F4DC;
+$col-max-blue-purple:#BAA5FF;
+$border-light-gray:#D6D6D6;
+$editor-bg-color:#F2F3EB;
+$input-text-color-whithe: #ECEFEF;
 
 //Media Screen Size
 $large-screen: 1368px;
@@ -27,3 +35,9 @@ $mobile-L: 425px;
 $mobile-M: 375px;
 $mobile-S: 320px;
 $sider-bar-break-point: 1313px;
+
+
+
+//input fixed size parameters
+$ani-input-container-h: 3.2em;
+$ani-input-t-padding: 1.5em;

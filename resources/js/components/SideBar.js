@@ -18,7 +18,12 @@ class SideBar extends React.Component{
                     </div>
                     <div className="side-links py-2 text-white-50">
                         <div className="pl-md-4 pl-2">
-                            <img src="/images/SVG/dashboard/dashboard_icon.svg" alt="image"/><a href="/">Home Page</a>
+                            <img src="/images/SVG/dashboard/home_icon.svg" alt="image"/><a href="/">Home Page</a>
+                        </div>
+                    </div>
+                    <div className="side-links py-2 text-white-50">
+                        <div className="pl-md-4 pl-2">
+                            <img src="/images/SVG/dashboard/dashboard_icon.svg" alt="image"/><a href="/dashboard">User Dashboard</a>
                         </div>
                     </div>
                     <div className="side-links py-2 text-white-50">
@@ -33,6 +38,11 @@ class SideBar extends React.Component{
                     </div>
                     <div className="side-links py-2 text-white-50">
                         <div className="pl-md-4 pl-2">
+                            <img src="/images/SVG/dashboard/blog_icon.svg" alt="image"/><a href="/dashboard/editor">New Blog</a>
+                        </div>
+                    </div>
+                    <div className="side-links py-2 text-white-50">
+                        <div className="pl-md-4 pl-2">
                             <img src="/images/SVG/dashboard/logout_icon.svg" alt="image"/><a href="#" onClick={(e)=>{
                             e.preventDefault();
                             $('#logout-form').submit();
@@ -43,8 +53,14 @@ class SideBar extends React.Component{
                 <div id="side-min" className="container sidebar-select py-3">
                     <a href="/">
                         <div className="side-links py-3 text-white">
-                            <img src="/images/SVG/dashboard/dashboard_icon.svg" alt="image"/>
+                            <img src="/images/SVG/dashboard/home_icon.svg" alt="image"/>
                             <p>Home</p>
+                        </div>
+                    </a>
+                    <a href="/dashboard">
+                        <div className="side-links py-3 text-white">
+                            <img src="/images/SVG/dashboard/dashboard_icon.svg" alt="image"/>
+                            <p>Dashboard</p>
                         </div>
                     </a>
                     <a href="/emailTemplates">
@@ -57,6 +73,12 @@ class SideBar extends React.Component{
                         <div className="side-links py-3 text-white">
                             <img src="/images/SVG/dashboard/newApplication_icon.svg" alt="image"/>
                             <p>Application</p>
+                        </div>
+                    </a>
+                    <a href="/dashboard/editor">
+                        <div className="side-links py-3 text-white">
+                            <img src="/images/SVG/dashboard/blog_icon.svg" alt="image"/>
+                            <p>Blog+</p>
                         </div>
                     </a>
                     <a href="#" onClick={(e)=>{

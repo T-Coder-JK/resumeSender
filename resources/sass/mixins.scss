@@ -24,4 +24,19 @@
 
 }
 
+@mixin border-triangle($size, $color, $direction, $right:0, $bottom:0){
+    position: relative;
+    &:after{
+        content: '';
+        position: absolute;
+        border: $size solid;
+        border-color: transparent;
+        border-#{$direction}-color: $color;
+        right: $right;
+        bottom: $bottom;
+        pointer-events: none;
+    }
+
+}
+
 

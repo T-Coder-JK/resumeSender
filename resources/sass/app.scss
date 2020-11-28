@@ -143,7 +143,7 @@
         }
     }
     #sideBar{
-        background-image: linear-gradient(to bottom, rgba(113, 109, 255, 100), rgba(164, 125, 255, 100));
+        background-image: linear-gradient(to bottom, $col-light-blue, $col-light-purple);
         max-width: 240px;
         height: 100vh;
         @media screen and (max-width: $sider-bar-break-point) {

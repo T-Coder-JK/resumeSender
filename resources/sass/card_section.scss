@@ -83,7 +83,7 @@
 
 
 .data-card-interview{
-    background-image: linear-gradient(135deg, rgba(68, 222, 197, 100), rgba(78, 188, 250, 100));
+    background-image: linear-gradient(135deg, $col-light-green, $col-dark-green);
     -webkit-box-shadow: 0 10px 39px 0 rgba(115,109,255,100);
     -moz-box-shadow: 0 10px 39px 0 rgba(115,109,255,100);
     box-shadow: 0 10px 39px 0 rgba(73,206,233,100);
