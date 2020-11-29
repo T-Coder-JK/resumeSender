@@ -18,6 +18,8 @@ import AnimationInput from './style_mini_components/AnimationInput';
 import AnimationSelect from './style_mini_components/AnimationSelect';
 
 function BlogEditor() {
+
+    //EditorJS initiate and set it's plugins
     const editor = new EditorJS({
         holder:'editor',
         autofocus: true,
@@ -100,18 +102,20 @@ function BlogEditor() {
                 </div>
             </div>
             <div className='editor-bg'>
-                <div className='input-editor col-9 m-auto'>
+                <div className='input-editor col-10 m-auto'>
                     <div className='section-input d-inline-flex flex-row  align-items-center'>
                         <div className='text-input'>
-                            <AnimationInput name='email' type='email' label='Email'/>
+                            <AnimationInput name='blog-title' type='text' label='Blog Title'/>
                         </div>
                         <div className='text-input'>
-                            <AnimationInput name='tag' type='text' label='Blog Tag'/>
+                            <AnimationSelect name='theme' id='blog-theme' label='Blog Theme' options={['Algorithm','Database','AWS','Ali-Cloud','Internet','React','Javascript','CSS','Laravel']}/>
                         </div>
                         <div className='text-input'>
-                            <AnimationSelect name='group' label='Visbility' options={['Private something very wordy and long','Publish','Publish1','Publish2','Publish3','Publish4']} id='visibiligy-groups'/>
+                            <AnimationSelect name='catergory' id='blog-catergory' label='Catergory' options={['Learning Note','Sharing Technique']}/>
                         </div>
-
+                        <div className='text-input'>
+                            <AnimationSelect name='group' label='Visbility' options={['Public','Private']} id='visibility-groups'/>
+                        </div>
                     </div>
                     <div className='editor-pad w-100 bg-light'>
                         <div id='editor'></div>

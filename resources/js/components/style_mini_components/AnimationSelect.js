@@ -27,12 +27,14 @@ class AnimationSelect extends React.Component{
     }
 
     showDropdownSelection(event){
-        const selectBoxOptionsContainer = document.querySelector('.select-box-options-container');
+        let targetId = event.target.id;
+        targetId = targetId.replace('-selected','');
+        const selectBoxOptionsContainer = document.querySelector('#'+targetId);
         if(event.type === 'blur'){
              // set a timeout for delaying the disappearing of dropdown meum, in order to capture the handleSelection event
             setTimeout(() => {
                 selectBoxOptionsContainer.classList.toggle('active');
-            }, 300);
+            }, 200);
         }else{
             selectBoxOptionsContainer.classList.toggle('active');
         }
@@ -51,12 +53,12 @@ class AnimationSelect extends React.Component{
         return(
            <div className='select-box'>
                <div className='select-box-container'>
-                   <div className='select-box-options-container'>
+                   <div className='select-box-options-container' id={this.props.id}>
                         {this.props.options.map(option => this.getOptions(option, this.props.name))}
                    </div>
                    <div className='selected-option'>
-                       <input id={this.props.id} type='text' value={this.state.selectedValue} name={this.props.label} onFocus={this.showDropdownSelection} onChange={this.handleInput} onBlur={this.showDropdownSelection}></input>
-                       <label htmlFor={this.props.id}>
+                       <input id={this.props.id + '-selected'} className={this.props.id} type='text' value={this.state.selectedValue} name={this.props.label} onFocus={this.showDropdownSelection} onChange={this.handleInput} onBlur={this.showDropdownSelection}></input>
+                       <label htmlFor={this.props.id + '-selected'}>
                            <span className='label-content'>{this.props.label}</span>
                         </label>
                        <span className='arrow'></span>
