@@ -155,7 +155,6 @@
                 display: none;
             }
         }
-        position: sticky;
         /*TODO: hide navigation bar, add a button to show it again*/
         @media screen and (max-width: 576px){
             display: none;
@@ -163,8 +162,8 @@
         }
     }
     #dashboard{
+        height: 100%;
         flex: 1;
-        overflow: scroll;
     }
 
     .nav-title{

@@ -20,7 +20,7 @@ class AnimationSelect extends React.Component{
     getOptions(element, name){
         return(
                 <div key={element} className='option'>
-                    <input type='radio' name={name} id={element} value={element} onClick={this.handleSelection}></input>
+                    <input type='radio' name={name} id={element} value={element} onClick={this.handleSelection} autoComplete='off'></input>
                     <label htmlFor={element}>{element}</label>
                 </div>
             )
@@ -57,7 +57,7 @@ class AnimationSelect extends React.Component{
                         {this.props.options.map(option => this.getOptions(option, this.props.name))}
                    </div>
                    <div className='selected-option'>
-                       <input id={this.props.id + '-selected'} className={this.props.id} type='text' value={this.state.selectedValue} name={this.props.label} onFocus={this.showDropdownSelection} onChange={this.handleInput} onBlur={this.showDropdownSelection}></input>
+                       <input id={this.props.id + '-selected'} className={this.props.id} type='text' value={this.state.selectedValue} name={this.props.label} onFocus={this.showDropdownSelection} onChange={this.handleInput} onBlur={this.showDropdownSelection} autoComplete='off'></input>
                        <label htmlFor={this.props.id + '-selected'}>
                            <span className='label-content'>{this.props.label}</span>
                         </label>
