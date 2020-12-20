@@ -11,8 +11,13 @@ const mix = require('laravel-mix');
  |
  */
 
-mix.react('resources/js/app.js', 'public/js')
-    .sass('resources/sass/app.scss', 'public/css')
-    .sass('resources/sass/card_section.scss', 'public/css/component')
-    .sass('resources/sass/blog_editor.scss', 'public/css/component')
-    .sass('resources/sass/style_mini_components/ani_input.scss', 'public/css/component');
+mix.react("resources/js/app.js", "public/js")
+    .sass("resources/sass/app.scss", "public/css")
+    .sass("resources/sass/card_section.scss", "public/css/component")
+    .sass("resources/sass/blog_editor.scss", "public/css/component")
+    .sass(
+        "resources/sass/style_mini_components/ani_input.scss",
+        "public/css/component"
+    )
+    .sass("resources/sass/homepage/panghao.scss", "public/css/homepage")
+    .js("resources/js/homepage/panghao.js", "public/js/homepage");

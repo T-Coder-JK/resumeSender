@@ -17,6 +17,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/panghao', function(){
+    return view('homepage.panghao');
+});
+
 Auth::routes();
 /*
  | Route for Dashboard Controllers
