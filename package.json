@@ -44,7 +44,7 @@
         "react-router-dom": "^5.2.0",
         "react-toastify": "^6.0.6",
         "summernote": "^0.8.18",
-        "three": "^0.123.0",
+        "three": "^0.125.0",
         "three-orbitcontrols": "^2.110.3"
     }
 }
