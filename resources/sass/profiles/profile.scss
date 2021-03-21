@@ -1,0 +1,36 @@
+body{
+    margin: 0;
+    padding:0;
+    font-size: 16px;
+}
+
+.container{
+    border-radius: 10px;
+    // display: none;
+    background: rgba(83,144,217,0.5);
+    // width: 25%;
+    // max-width: 300px;
+    height: 200px;
+    color: white;
+    .header{
+        font-family: 'Raleway', serif;
+        font-weight: 600;
+        padding-top: 0.2em;
+        text-align: center;
+        width: 100%;
+        font-size: 0.7em;
+    }
+    .content-wrapper{
+        font-family: 'Raleway';
+        font-weight: 200;
+        margin: auto;
+        padding: 0.2em;
+        width: 90%;
+        height: 150px;
+        font-size: 0.4em;
+    }
+    &:hover{
+        border: 1px solid white;
+    }
+}
+

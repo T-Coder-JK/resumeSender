@@ -19,5 +19,5 @@ mix.react("resources/js/app.js", "public/js")
         "resources/sass/style_mini_components/ani_input.scss",
         "public/css/component"
     )
-    .sass("resources/sass/homepage/panghao.scss", "public/css/homepage")
-    .js("resources/js/homepage/panghao.js", "public/js/homepage");
+    .sass("resources/sass/profiles/profile.scss", "public/css/profiles")
+    .js("resources/js/profiles/panghao.js", "public/js/profiles");

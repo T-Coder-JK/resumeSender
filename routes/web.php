@@ -18,7 +18,7 @@ Route::get('/', function () {
 });
 
 Route::get('/panghao', function(){
-    return view('homepage.panghao');
+    return view('profiles.panghao');
 });
 
 Auth::routes();

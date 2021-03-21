@@ -1,9 +1,9 @@
 {
     "/js/app.js": "/js/app.js",
-    "/js/homepage/panghao.js": "/js/homepage/panghao.js",
+    "/js/profiles/panghao.js": "/js/profiles/panghao.js",
     "/css/app.css": "/css/app.css",
     "/css/component/card_section.css": "/css/component/card_section.css",
     "/css/component/blog_editor.css": "/css/component/blog_editor.css",
     "/css/component/ani_input.css": "/css/component/ani_input.css",
-    "/css/homepage/panghao.css": "/css/homepage/panghao.css"
+    "/css/profiles/profile.css": "/css/profiles/profile.css"
 }
